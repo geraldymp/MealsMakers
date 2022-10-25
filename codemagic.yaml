@@ -8,18 +8,13 @@ workflows:
               XCODE_PROJECT: "MealsMakers.xcodeproj" # Isikan nama project Anda.
               XCODE_SCHEME: "MealsMakers" # Isikan nama scheme project Anda.
         scripts:
-          - name: Set up app/build.gradle
-            script: | 
-              #!/bin/sh
-              set -ex
-              printenv
           - name: Run tests
             script: |
               xcodebuild \
               -project "$XCODE_PROJECT" \
               -scheme "$XCODE_SCHEME" \
               -sdk iphonesimulator \
-              -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.0' \
+              -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.0' \
               clean build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO          
           - name: Build debug app
             script: |
