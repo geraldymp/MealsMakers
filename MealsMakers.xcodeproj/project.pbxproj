@@ -27,7 +27,6 @@
 		E61F716F2903A50E00742D2F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E61F716E2903A50E00742D2F /* Alamofire */; };
 		E61F71722903A57500742D2F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E61F71712903A57500742D2F /* Realm */; };
 		E61F71742903A57500742D2F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E61F71732903A57500742D2F /* RealmSwift */; };
-		E61F71772903A5ED00742D2F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E61F71762903A5ED00742D2F /* SDWebImageSwiftUI */; };
 		E61F717C2903AC3F00742D2F /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F717B2903AC3F00742D2F /* FavoriteView.swift */; };
 		E61F717E2903ACCE00742D2F /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F717D2903ACCE00742D2F /* FavoritePresenter.swift */; };
 		E61F71802903AD3200742D2F /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F717F2903AD3200742D2F /* FavoriteInteractor.swift */; };
@@ -39,6 +38,7 @@
 		E692596D29039B3700D6F17E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E692596C29039B3700D6F17E /* ContentView.swift */; };
 		E692596F29039B3800D6F17E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E692596E29039B3800D6F17E /* Assets.xcassets */; };
 		E692597229039B3800D6F17E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E692597129039B3800D6F17E /* Preview Assets.xcassets */; };
+		E6D5616529081FC600FFC72C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E6D5616429081FC600FFC72C /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61F71772903A5ED00742D2F /* SDWebImageSwiftUI in Frameworks */,
+				E6D5616529081FC600FFC72C /* SDWebImageSwiftUI in Frameworks */,
 				E61F71742903A57500742D2F /* RealmSwift in Frameworks */,
 				E61F71722903A57500742D2F /* Realm in Frameworks */,
 				E61F716F2903A50E00742D2F /* Alamofire in Frameworks */,
@@ -399,7 +399,7 @@
 				E61F716E2903A50E00742D2F /* Alamofire */,
 				E61F71712903A57500742D2F /* Realm */,
 				E61F71732903A57500742D2F /* RealmSwift */,
-				E61F71762903A5ED00742D2F /* SDWebImageSwiftUI */,
+				E6D5616429081FC600FFC72C /* SDWebImageSwiftUI */,
 			);
 			productName = MealsMakers;
 			productReference = E692596729039B3700D6F17E /* MealsMakers.app */;
@@ -432,7 +432,7 @@
 			packageReferences = (
 				E61F716D2903A50E00742D2F /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E61F71702903A57500742D2F /* XCRemoteSwiftPackageReference "realm-swift" */,
-				E61F71752903A5ED00742D2F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				E6D5616329081FC600FFC72C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = E692596829039B3700D6F17E /* Products */;
 			projectDirPath = "";
@@ -542,7 +542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -596,7 +596,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -704,7 +704,7 @@
 				kind = branch;
 			};
 		};
-		E61F71752903A5ED00742D2F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+		E6D5616329081FC600FFC72C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
@@ -730,9 +730,9 @@
 			package = E61F71702903A57500742D2F /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
-		E61F71762903A5ED00742D2F /* SDWebImageSwiftUI */ = {
+		E6D5616429081FC600FFC72C /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E61F71752903A5ED00742D2F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			package = E6D5616329081FC600FFC72C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
