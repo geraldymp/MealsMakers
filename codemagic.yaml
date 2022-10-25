@@ -1,5 +1,5 @@
-workflows: # workflow ID
-    ios-workflow: meal-makers-project
+workflows: 
+    ios-project-debug: # workflow ID
     name: Meal Makers # workflow name
     environment:
       xcode: latest
