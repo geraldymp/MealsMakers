@@ -8,6 +8,11 @@ workflows:
               XCODE_PROJECT: "MealsMakers.xcodeproj" # Isikan nama project Anda.
               XCODE_SCHEME: "MealsMakers" # Isikan nama scheme project Anda.
         scripts:
+          - name: Set up app/build.gradle
+            script: | 
+              #!/bin/sh
+              set -ex
+              printenv
           - name: Run tests
             script: |
               xcodebuild \
