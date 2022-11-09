@@ -7,9 +7,11 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import CoreOfMealsMaker
+import Meal
 
 struct MealItem: View {
-  var meal: MealModel
+  var meal: MealDomainModel
   
   var body: some View {
     HStack {
@@ -35,7 +37,7 @@ extension MealItem {
   
   var mealDescription: some View {
     VStack(alignment: .leading) {
-      Text(meal.category)
+      Text(meal.name)
         .font(.system(size: 14))
         .foregroundColor(Color.gray)
       Text(meal.name)

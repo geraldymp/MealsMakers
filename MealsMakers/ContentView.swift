@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import CoreOfMealsMaker
+import Meal
 
 struct ContentView: View {
-  @EnvironmentObject var homePresenter: HomePresenter
+  @EnvironmentObject var homePresenter: GetListPresenter<Any, MealDomainModel, Interactor<Any, [MealDomainModel], GetMealsRepository<GetMealsLocaleDataSource, GetMealsRemoteDataSource, MealTransformer>>>
   var body: some View {
     NavigationView {
       HomeView(presenter: homePresenter)

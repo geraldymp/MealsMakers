@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import Meal
+import CoreOfMealsMaker
 
 class FavoriteRouter {
   
-  func makeDetailView(for meal: MealModel) -> some View {
-    let detailUseCase = Injection.init().provideDetail(meal: meal)
-    let presenter = DetailPresenter(detailUseCase: detailUseCase, showFavoriteButton: false)
-    return DetailView(presenter: presenter)
+  func makeDetailView(for meal: MealDomainModel) -> some View {
+    let useCase: Interactor<MealDomainModel, Bool, DetailRepository<DetailLocaleDataSource, FavoriteTransformer>> = Injection.init().provideDetail()
+    let presenter = DetailPresenter(useCase: useCase)
+    return DetailView(presenter: presenter, meal: meal)
   }
 
 }

@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "coreofmealsmaker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/geraldymp/CoreOfMealsMaker.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "a615d8ffcb123cb80b9e7f00b2cb62f46b283773"
+      }
+    },
+    {
       "identity" : "realm-core",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core",

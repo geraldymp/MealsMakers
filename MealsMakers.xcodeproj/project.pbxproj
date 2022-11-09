@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60F2231290A3A75003162A3 /* Meal in Frameworks */ = {isa = PBXBuildFile; productRef = E60F2230290A3A75003162A3 /* Meal */; };
 		E61F713D2903A15500742D2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F713C2903A15500742D2F /* HomeView.swift */; };
 		E61F713F2903A18B00742D2F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F713E2903A18B00742D2F /* HomePresenter.swift */; };
 		E61F71412903A1D300742D2F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F71402903A1D300742D2F /* HomeRouter.swift */; };
@@ -38,6 +39,7 @@
 		E692596D29039B3700D6F17E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E692596C29039B3700D6F17E /* ContentView.swift */; };
 		E692596F29039B3800D6F17E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E692596E29039B3800D6F17E /* Assets.xcassets */; };
 		E692597229039B3800D6F17E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E692597129039B3800D6F17E /* Preview Assets.xcassets */; };
+		E6C2A4F8291B5526003DCD1D /* CoreOfMealsMaker in Frameworks */ = {isa = PBXBuildFile; productRef = E6C2A4F7291B5526003DCD1D /* CoreOfMealsMaker */; };
 		E6D5616529081FC600FFC72C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E6D5616429081FC600FFC72C /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,7 @@
 		E692596C29039B3700D6F17E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E692596E29039B3800D6F17E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E692597129039B3800D6F17E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6E2B18E29096E7800AEF4E7 /* Meal */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Meal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6C2A4F8291B5526003DCD1D /* CoreOfMealsMaker in Frameworks */,
 				E6D5616529081FC600FFC72C /* SDWebImageSwiftUI in Frameworks */,
+				E60F2231290A3A75003162A3 /* Meal in Frameworks */,
 				E61F71742903A57500742D2F /* RealmSwift in Frameworks */,
 				E61F71722903A57500742D2F /* Realm in Frameworks */,
 				E61F716F2903A50E00742D2F /* Alamofire in Frameworks */,
@@ -88,6 +93,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E60F222D290A3A70003162A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E61F71372903A12000742D2F /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,8 +327,10 @@
 		E692595E29039B3700D6F17E = {
 			isa = PBXGroup;
 			children = (
+				E6E2B18E29096E7800AEF4E7 /* Meal */,
 				E692596929039B3700D6F17E /* MealsMakers */,
 				E692596829039B3700D6F17E /* Products */,
+				E60F222D290A3A70003162A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -400,6 +414,8 @@
 				E61F71712903A57500742D2F /* Realm */,
 				E61F71732903A57500742D2F /* RealmSwift */,
 				E6D5616429081FC600FFC72C /* SDWebImageSwiftUI */,
+				E60F2230290A3A75003162A3 /* Meal */,
+				E6C2A4F7291B5526003DCD1D /* CoreOfMealsMaker */,
 			);
 			productName = MealsMakers;
 			productReference = E692596729039B3700D6F17E /* MealsMakers.app */;
@@ -433,6 +449,7 @@
 				E61F716D2903A50E00742D2F /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E61F71702903A57500742D2F /* XCRemoteSwiftPackageReference "realm-swift" */,
 				E6D5616329081FC600FFC72C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				E6C2A4F6291B5526003DCD1D /* XCRemoteSwiftPackageReference "CoreOfMealsMaker" */,
 			);
 			productRefGroup = E692596829039B3700D6F17E /* Products */;
 			projectDirPath = "";
@@ -704,6 +721,14 @@
 				kind = branch;
 			};
 		};
+		E6C2A4F6291B5526003DCD1D /* XCRemoteSwiftPackageReference "CoreOfMealsMaker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/geraldymp/CoreOfMealsMaker.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		E6D5616329081FC600FFC72C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -715,6 +740,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E60F2230290A3A75003162A3 /* Meal */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Meal;
+		};
 		E61F716E2903A50E00742D2F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E61F716D2903A50E00742D2F /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -729,6 +758,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E61F71702903A57500742D2F /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		E6C2A4F7291B5526003DCD1D /* CoreOfMealsMaker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6C2A4F6291B5526003DCD1D /* XCRemoteSwiftPackageReference "CoreOfMealsMaker" */;
+			productName = CoreOfMealsMaker;
 		};
 		E6D5616429081FC600FFC72C /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

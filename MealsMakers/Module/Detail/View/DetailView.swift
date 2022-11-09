@@ -7,9 +7,13 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import CoreOfMealsMaker
+import Meal
 
 struct DetailView: View {
-  @ObservedObject var presenter: DetailPresenter
+  @ObservedObject var presenter: DetailPresenter<MealDomainModel, Bool, Interactor<MealDomainModel, Bool, DetailRepository<DetailLocaleDataSource, FavoriteTransformer>>>
+  
+  var meal: MealDomainModel
   
   var body: some View {
     ZStack {
@@ -21,12 +25,15 @@ struct DetailView: View {
         }
       }
     }
+    .onAppear {
+      presenter.checkFavorite(request: meal)
+    }
   }
 }
 
 extension DetailView {
   var imageMeal: some View {
-    WebImage(url: URL(string: self.presenter.meal.image))
+    WebImage(url: URL(string: meal.image))
       .resizable()
       .indicator(.activity)
       .scaledToFit()
@@ -40,27 +47,27 @@ extension DetailView {
   var nameOfMeal: some View {
     HStack {
       VStack(alignment: .leading, spacing: 0) {
-        Text(self.presenter.meal.name)
+        Text(meal.name)
           .font(.headline)
           .padding(.horizontal, 16)
-        Text("\(self.presenter.meal.category) | \(self.presenter.meal.area)")
+        Text("\(meal.category) | \(meal.area)")
           .font(.system(size: 14))
           .foregroundColor(Color.gray.opacity(0.5))
           .padding(.horizontal, 16)
           .padding(.top, 4)
       }
       Spacer()
-      if presenter.showFavoriteButton {
         Button(
-          action: { presenter.favoriteButtonPressed() },
+          action: {
+            presenter.updateFav(request: meal)
+          },
           label: {
-            Image(systemName: presenter.isFavorited ? "star.fill" : "star")
+            Image(systemName: presenter.isFavorite ? "star.fill" : "star")
               .foregroundColor(Color.black.opacity(0.3))
           }
         )
         .frame(alignment: .trailing)
         .padding(.horizontal, 16)
-      }
     }
     .padding(.bottom, 10)
   }
@@ -73,7 +80,7 @@ extension DetailView {
         .padding(.top, 10)
         .padding(.bottom, 2)
         .padding(.horizontal, 16)
-      Text(self.presenter.meal.description)
+      Text(meal.description)
         .font(.system(size: 14))
         .padding(.horizontal, 16)
     }
